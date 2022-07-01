@@ -1,0 +1,47 @@
+{
+    "name": "@observermc/hypixel",
+    "version": "0.0.0",
+    "description": "A Hypixel API client",
+    "license": "MIT",
+    "homepage": "https://github.com/observermc/node-hypixel",
+    "bugs": "https://github.com/observermc/node-hypixel/issues",
+    "type": "module",
+    "main": "dist",
+    "repository": "github:observermc/node-hypixel",
+    "scripts": {
+        "build": "tsc",
+        "lint": "eslint .",
+        "lint-fix": "npm run lint -- --fix"
+    },
+    "engines": {
+        "node": "18"
+    },
+    "devDependencies": {
+        "@types/node": "^18.0.0",
+        "@typescript-eslint/eslint-plugin": "^5.29.0",
+        "@typescript-eslint/parser": "^5.29.0",
+        "eslint": "^8.18.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-prettier": "^4.0.0",
+        "prettier": "^2.7.1",
+        "typescript": "^4.7.4"
+    },
+    "eslintConfig": {
+        "root": true,
+        "parser": "@typescript-eslint/parser",
+        "plugins": [
+            "@typescript-eslint",
+            "prettier"
+        ],
+        "extends": [
+            "eslint:recommended",
+            "plugin:@typescript-eslint/recommended",
+            "plugin:prettier/recommended"
+        ]
+    },
+    "prettier": {
+        "tabWidth": 4,
+        "semi": false,
+        "trailingComma": "all"
+    }
+}
