@@ -6,7 +6,12 @@
     "homepage": "https://github.com/observermc/node-hypixel",
     "bugs": "https://github.com/observermc/node-hypixel/issues",
     "type": "module",
-    "main": "dist",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.js"
+        }
+    },
     "repository": "github:observermc/node-hypixel",
     "scripts": {
         "build": "tsc",
@@ -16,8 +21,11 @@
     "engines": {
         "node": "18"
     },
+    "dependencies": {
+        "ioredis": "^5.2.2"
+    },
     "devDependencies": {
-        "@types/node": "^18.0.0",
+        "@types/node": "^18.6.4",
         "@typescript-eslint/eslint-plugin": "^5.29.0",
         "@typescript-eslint/parser": "^5.29.0",
         "eslint": "^8.18.0",
@@ -37,7 +45,10 @@
             "eslint:recommended",
             "plugin:@typescript-eslint/recommended",
             "plugin:prettier/recommended"
-        ]
+        ],
+        "rules": {
+            "@typescript-eslint/no-explicit-any": "off"
+        }
     },
     "prettier": {
         "tabWidth": 4,
