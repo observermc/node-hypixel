@@ -9,7 +9,7 @@ export interface RedisCacheOptions {
 export class RedisCache implements Cache {
     static defaultOptions: RedisCacheOptions = {
         ttl: 60,
-        keyPrefix: "ohc-e4370f16:",
+        keyPrefix: "ohc-e4370f16",
     }
 
     options: RedisCacheOptions
